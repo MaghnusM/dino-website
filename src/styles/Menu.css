@@ -1,0 +1,63 @@
+@import url(https://db.onlinewebfonts.com/c/b2e75c336df191233b3096682c9ee6be?family=PixelarRegularW01-Regular);
+
+/* Menu Bar */
+.menu {
+    background-color: #1a1c1d;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    border-color: #ea00d8;
+    border-style: solid;
+    border-width: 0px 0px 2px 0px;
+  }
+  
+  .menu-logo {
+    min-width: 20%;
+    width: 30%;
+    margin-left: 15%;
+    display: flex;
+  }
+  
+  .menu-center {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .menu-right {
+    display: flex;
+    margin-right: 2%;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .menu-center-container {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    display: flex;
+    width: 100%;
+  }
+  
+  .menu-link-div {
+    display: flex;
+    width: auto;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  
+  .menu-link {
+    font-family: "PixelarRegularW01-Regular"!important;
+    margin: 10px;
+    text-decoration: none;
+    font-size: 35px;
+    font-weight: bold;
+    color: #00fefe;
+  }
