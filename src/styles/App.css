@@ -109,7 +109,7 @@ div.gradient-text.roadmap-title {
 }
 
 .content-container {
-  width: 50%;
+  width: 80%;
   height: auto;
   display: flex;
   justify-content: center;
@@ -371,7 +371,7 @@ a {
 .minting-container {
   background-color: white;
   border-radius: 5px;
-  margin-top: 15%;
+  margin-top: 50px;
   width: 400px;
 }
 

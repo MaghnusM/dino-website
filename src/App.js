@@ -343,15 +343,15 @@ const App = () => {
       <div className="footer">
         <div className="footer-container-bottom">
           <a href="#mint">
-            <img className="logo-footer-button" src={OpenseaLogo} />  
+            <a href="https://twitter.com/dinosdeluxe">
+              <img className="logo-footer-button" src={OpenseaLogo} />  
+            </a>
           </a>
           <a className="vertical-line"></a>
-          <a href="https://twitter.com/The_HopeDAO">
+          <a href="https://twitter.com/dinosdeluxe">
             <img className="twitter-button" src={TwitterLogo} />  
           </a>
-          <a href="https://discord.gg/KJaJ9g9x">
-            <img className="discord-button" src={DiscordLogo} />  
-          </a>
+          {/* <a href="https://discord.gg/KJaJ9g9x"><img className="discord-button" src={DiscordLogo} />  </a> */}
         </div>
       </div>
     </div>
