@@ -389,7 +389,7 @@ const App = () => {
           )}
         </div>
       </div>
-      {/* Footer */}
+      {/* Footer */} 
       <div className="footer">
         <div className="footer-container-bottom">
           <a href="#mint">
