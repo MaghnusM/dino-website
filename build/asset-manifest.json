@@ -1,21 +1,24 @@
 {
   "files": {
-    "main.css": "/static/css/main.82aca2b8.chunk.css",
-    "main.js": "/static/js/main.a9100957.chunk.js",
-    "main.js.map": "/static/js/main.a9100957.chunk.js.map",
+    "main.css": "/static/css/main.3803c59b.chunk.css",
+    "main.js": "/static/js/main.91f739d7.chunk.js",
+    "main.js.map": "/static/js/main.91f739d7.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.f294effb.js",
     "runtime-main.js.map": "/static/js/runtime-main.f294effb.js.map",
-    "static/js/2.5e3509c7.chunk.js": "/static/js/2.5e3509c7.chunk.js",
-    "static/js/2.5e3509c7.chunk.js.map": "/static/js/2.5e3509c7.chunk.js.map",
+    "static/js/2.31fc8ffa.chunk.js": "/static/js/2.31fc8ffa.chunk.js",
+    "static/js/2.31fc8ffa.chunk.js.map": "/static/js/2.31fc8ffa.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.b3bf66d7c0dedb7209ff7f491a0d58bc.js": "/precache-manifest.b3bf66d7c0dedb7209ff7f491a0d58bc.js",
+    "precache-manifest.cfb2b1262e480147921b15da20ec5d46.js": "/precache-manifest.cfb2b1262e480147921b15da20ec5d46.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.82aca2b8.chunk.css.map": "/static/css/main.82aca2b8.chunk.css.map",
+    "static/css/main.3803c59b.chunk.css.map": "/static/css/main.3803c59b.chunk.css.map",
+    "static/media/artbook1.png": "/static/media/artbook1.80f10a42.png",
+    "static/media/artbook2.png": "/static/media/artbook2.64d0f6eb.png",
     "static/media/ddlogo.png": "/static/media/ddlogo.78ac9591.png",
+    "static/media/dino1.png": "/static/media/dino1.08aaa626.png",
+    "static/media/dino2.png": "/static/media/dino2.bab5e6f4.png",
+    "static/media/dino3.png": "/static/media/dino3.100db557.png",
     "static/media/dinogif1.gif": "/static/media/dinogif1.e0dc6a8a.gif",
-    "static/media/dinogif2.gif": "/static/media/dinogif2.5e13cbc2.gif",
-    "static/media/dinogif3.gif": "/static/media/dinogif3.3c7698ef.gif",
-    "static/media/dinotopiaIsReal.png": "/static/media/dinotopiaIsReal.4d82ce18.png",
+    "static/media/dinotopiaisreal.png": "/static/media/dinotopiaisreal.2e6447b5.png",
     "static/media/discord.png": "/static/media/discord.cdda202b.png",
     "static/media/discordlogo.svg": "/static/media/discordlogo.3437c105.svg",
     "static/media/sample1.png": "/static/media/sample1.d6982ae8.png",
@@ -30,8 +33,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.f294effb.js",
-    "static/js/2.5e3509c7.chunk.js",
-    "static/css/main.82aca2b8.chunk.css",
-    "static/js/main.a9100957.chunk.js"
+    "static/js/2.31fc8ffa.chunk.js",
+    "static/css/main.3803c59b.chunk.css",
+    "static/js/main.91f739d7.chunk.js"
   ]
 }
