@@ -45,6 +45,7 @@ const Menu = () => {
           const account = accounts[0];
           setCurrentAccount(account);
           console.log("have account", account);
+          window.location.reload(false);
         } else {
           console.log("no accounts!");
         }
@@ -85,7 +86,7 @@ const Menu = () => {
         <div className="menu-right">
         {currentAccount==="" ? 
           <button onClick={connectWallet} className="button-truncate top-menu-connect-button connect-wallet-button">
-            Connect Wallet
+            CONNECT
           </button> : 
         <button className="button-truncate top-menu-button-disabled connect-wallet-button">
         {currentAccount}

@@ -124,8 +124,7 @@ const App = () => {
         if (accounts.length !== 0) {
           const account = accounts[0];
           setCurrentAccount(account);
-          console.log("have account", account);
-          checkIsMintActive();
+          console.log("UPDATE SUPPLY");
           updateTotalSupply();
           checkIfWalletIsConnected();
         } else {
