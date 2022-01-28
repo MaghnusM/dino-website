@@ -35,7 +35,7 @@ import DinosDeluxe from './utils/DinosDeluxe.json';
 
 const App = () => {
 
-  const CONTRACT_ADDRESS = "0xb8B4AE735106fea639EfE63Ccc69fA2C4f98227B";
+  const CONTRACT_ADDRESS = "0x933136c6c64abD4FB6b59761A46660b80c1f9B92";
 
   const [currentAccount, setCurrentAccount] = useState("");
   const [isMintActive, setIsMintActive] = useState("");
