@@ -5,12 +5,17 @@ import TwitterLogo from './assets/twitter-logo.svg';
 import DiscordLogo from './assets/discord.png';
 import OpenseaLogo from './assets/opensea.png';
 
-import dinotopiaIsReal from './assets/dinotopiaIsReal.png';
+import dinotopiaIsReal from './assets/dinotopiaisreal.png';
+
+import artbook1 from './assets/artbook1.png';
+import artbook2 from './assets/artbook2.png';
+
 import ddLogo from './assets/ddlogo.png';
 
-import dino1 from './assets/dinogif1.gif';
-import dino2 from './assets/dinogif2.gif';
-import dino3 from './assets/dinogif3.gif';
+import dino1gif from './assets/dinogif1.gif';
+import dino1 from './assets/dino1.png';
+import dino2 from './assets/dino2.png';
+import dino3 from './assets/dino3.png';
 
 import sample1 from './assets/sample1.png';
 import sample2 from './assets/sample2.png';
@@ -211,7 +216,7 @@ const App = () => {
             {/* <img src={ddLogo} alt="ddLogo" className="dd-logo"/> */}
             <p className="header gradient-text title">DINOS DELUXE</p> 
             <p className="sub-text">
-              5000 dinos vibing moments before the meteor hits
+              3000 dinos vibing moments before the meteor hits
             </p>
             <br />
             {currentAccount === "" ? (
@@ -262,14 +267,13 @@ const App = () => {
               <div className="minting-image">
               </div>
               <div className="minting-amount">
-                <img src={dino1} className="art-gif-preview" />
+                <img src={dino1gif} className="art-gif-preview" />
                 <p className="supply">Dinos Deluxe</p>
-                <p className="supply">{totalSupply} / 5000</p>
+                <p className="supply">{totalSupply} / 3000</p>
               </div>
             </div>
           </div>
         </div>
-
         <div className="footer-container">
         </div>
       </div>
@@ -279,7 +283,7 @@ const App = () => {
           Art
         </div>
         <br />
-        <p className="sub-text">There are 5000 <b>Dino Deluxes</b></p>
+        <p className="sub-text">There are 3000 <b>Dino Deluxes</b></p>
         <br />
         <div className="art-preview-container">
           <img src={sample1} className="art-sample" />
@@ -302,6 +306,20 @@ const App = () => {
             <img src={dino3} className="art-gif" />
         </div>
       </div>
+      <div id="package" className="container package-container">
+        <div className="horizontal-divider"></div>
+        <div className="gradient-text package-title">
+          WHAT YOU GET
+        </div>
+        <p className="sub-text"><b>It's more than a PFP...</b></p>
+        <img src={artbook1} className="artbook-img" />
+        <img src={artbook2} className="artbook-img" />
+        <p className="sub-text">+ Unique Cool NFT</p>
+        <a className="dino-link" href="https://dinosdeluxe.itch.io/dinos-deluxe?secret=fIsz26QimINPBOKljgzJ6XASNQ">
+          <p className="sub-text">+ One-Way Ticket to Dinotopia</p>
+        </a>
+        <p className="sub-text">+ Autographed Dinos Deluxe Artbook</p>
+      </div>
       <div id="utility" className="container roadmap-container">
         <div className="horizontal-divider"></div>
         <div className="gradient-text roadmap-title">
@@ -309,8 +327,12 @@ const App = () => {
         </div>
         <br />
         <div className="dino-container">
-          <p className="sub-text">All holders of Dinos Deluxe will get access to <b>Dinotopia</b></p>
-          <img className="dinotopia" src={dinotopiaIsReal} />  
+          <a className="dino-link" href="https://dinosdeluxe.itch.io/dinos-deluxe?secret=fIsz26QimINPBOKljgzJ6XASNQ">
+            <p className="sub-text">All holders of Dinos Deluxe will get access to <b>Dinotopia</b></p>
+          </a>
+          <a className="dino-link" href="https://dinosdeluxe.itch.io/dinos-deluxe?secret=fIsz26QimINPBOKljgzJ6XASNQ">
+            <img className="dinotopia-img" src={dinotopiaIsReal} />  
+          </a>
           <p className="sub-text">Dinotopia is a unique gaming experience reliving the great extinction, who will be the last dinosaur on earth?</p>
         </div>
       </div>

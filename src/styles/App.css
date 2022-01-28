@@ -37,7 +37,27 @@
   padding: 0 5% 0 5%;
 }
 
+.artbook-img {
+  width: 75%;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.package-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  padding: 0 5% 0 5%;
+}
+
 div.gradient-text.art-title {
+  font-size: 75px;
+  font-weight: bold;
+  align-self: center;
+}
+
+div.gradient-text.package-title {
   font-size: 75px;
   font-weight: bold;
   align-self: center;
@@ -456,9 +476,18 @@ div.footer-container-bottom a {
   flex-direction: column;
 }
 
-.dinotopia {
+.dino-link {
+  display: flex;
+  color: none;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+}
+
+.dinotopia-img {
   margin-top: 10px;
   margin-bottom: 20px;
+  width: 75%;
 }
 
 /* KeyFrames */
