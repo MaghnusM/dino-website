@@ -26,6 +26,8 @@ import sample6 from './assets/sample6.png';
 import sample7 from './assets/sample7.png';
 import sample8 from './assets/sample8.png';
 
+import Swal from "sweetalert2";
+
 import React, { useEffect, useState } from "react";
 import { ethers } from "ethers";
 
@@ -36,7 +38,7 @@ import DinosDeluxe from './utils/DinosDeluxe.json';
 
 const App = () => {
 
-  const CONTRACT_ADDRESS = "";
+  const CONTRACT_ADDRESS = "0xb8B4AE735106fea639EfE63Ccc69fA2C4f98227B";
 
   const [currentAccount, setCurrentAccount] = useState("");
   const [isMintActive, setIsMintActive] = useState("");
@@ -67,6 +69,27 @@ const App = () => {
       }
     } catch (error) {
       console.log(error)
+    }
+  }
+
+  const updateTotalSupply = async () => {
+    try {
+      const { ethereum } = window;
+
+      if (ethereum) {
+
+        const provider = new ethers.providers.Web3Provider(ethereum);
+        const signer = provider.getSigner();
+        const connectedContract = new ethers.Contract(CONTRACT_ADDRESS, contractABI, signer);
+
+        let supply = parseInt(await connectedContract.totalSupply());
+        console.log("supply");
+        console.log(`${supply}`);
+        setTotalSupply(parseInt(`${supply}`));
+      }
+    } catch (error) {
+      console.log(error);
+      console.log("cant find contract?");
     }
   }
 
@@ -117,22 +140,6 @@ const App = () => {
     }
   }
 
-  const updateTotalSupply = async () => {
-    try {
-      // const { ethereum } = window;
-
-      const provider = new ethers.providers.getDefaultProvider();
-      const connectedContract = new ethers.Contract(CONTRACT_ADDRESS, contractABI, provider);
-
-      let supply = await connectedContract.totalSupply();
-      console.log("supply");
-      console.log(`${supply}`);
-      setTotalSupply(parseInt(`${supply}`));
-    } catch (error) {
-      console.log("cant find contract?");
-    }
-  }
-
   const mint = async () => {
 
     try {
@@ -151,10 +158,10 @@ const App = () => {
             console.log(supply);
             var amount = 0.0;
 
-            if (parseInt(supply) + parseInt(numMfers) > 1000) {
+            if (parseInt(supply) + parseInt(numMfers) > 500) {
               console.log("supply");
               console.log(parseInt(supply));
-              amount = numMfers * 0.0269;
+              amount = numMfers * 0.03;
             }
 
             console.log("amount");
@@ -178,6 +185,7 @@ const App = () => {
             let nftTxn = await connectedContract.mint(numMfers, options);
             console.log("Mining mint... please wait.")
             await nftTxn.wait();
+            Swal.fire(`Successfully minted ${numMfers} Dinos!`, '', 'info');
             console.log(`Mined, see transaction: https://etherscan.io/tx/${nftTxn.hash}`);
           }
         } catch (error) {
@@ -240,13 +248,12 @@ const App = () => {
                         MINT DINOS
                       </button>
                       <div className="mint-quantity">
-                        <p className="mint-text">mint amount (max 20)</p>
                         <textarea 
                           name = "numDadMfers"
                           type="text"
                           id="numMfers"
                           className="textarea-entry"
-                          placeholder="quantity"
+                          placeholder="max 20"
                           onChange={e => setNumMfers(e.target.value)}
                         >
                         </textarea>
@@ -258,10 +265,10 @@ const App = () => {
             ]}
             <br />
             <p className="smol-text">
-              <b>FIRST 1000 FREE</b>
+              FIRST 500 FREE, THEN 0.03 ETH
             </p>
             <p className="smol-text">
-              <b>THEN 0.05 ETH</b>
+              <b>MINTED: {totalSupply} / 3000</b>
             </p>
             <div className="minting-container">
               <div className="minting-image">

@@ -37,6 +37,8 @@
   "devDependencies": {
     "fs-extra": "^10.0.0",
     "solc": "^0.8.9",
+    "sweet-alert": "^2.0.5",
+    "sweetalert2": "^11.3.10",
     "worker-loader": "^3.0.8"
   }
 }
