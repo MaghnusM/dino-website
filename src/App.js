@@ -5,12 +5,8 @@ import TwitterLogo from './assets/twitter-logo.svg';
 import DiscordLogo from './assets/discord.png';
 import OpenseaLogo from './assets/opensea.png';
 
-import dinotopiaIsReal from './assets/dinotopiaisreal.png';
-
 import artbook1 from './assets/artbook1.png';
 import artbook2 from './assets/artbook2.png';
-
-import ddLogo from './assets/ddlogo.png';
 
 import dino1gif from './assets/dinogif1.gif';
 import dino1 from './assets/dino1.png';
@@ -25,6 +21,7 @@ import sample5 from './assets/sample5.png';
 import sample6 from './assets/sample6.png';
 import sample7 from './assets/sample7.png';
 import sample8 from './assets/sample8.png';
+import dinotopiaIsReal from './assets/dinotopia.png';
 
 import Swal from "sweetalert2";
 
