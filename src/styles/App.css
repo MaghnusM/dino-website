@@ -23,7 +23,6 @@
 }
 
 .horizontal-divider {
-  width: 100%;
   border-bottom: 2px solid #ea00d8;
   margin: 30px;
   height: 10px;
@@ -38,7 +37,7 @@
 }
 
 .artbook-img {
-  width: 75%;
+  width: 50%;
   border-radius: 5px;
   margin-bottom: 10px;
 }
@@ -490,6 +489,21 @@ div.footer-container-bottom a {
   margin-top: 10px;
   margin-bottom: 20px;
   width: 75%;
+}
+
+.unlockables {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.dino-ticket-img {
+  width: 45%;
+  margin-right: 2.5%;
+}
+
+.dino-art-book-img {
+  width: 45%;
+  margin-left: 2.5%;
 }
 
 /* KeyFrames */

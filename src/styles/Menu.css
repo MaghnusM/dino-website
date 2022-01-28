@@ -25,6 +25,11 @@
     border-style: solid;
     border-width: 0px 0px 2px 0px;
   }
+
+  .dinotopia-ticket {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
   
   .menu-logo {
     min-width: 20%;

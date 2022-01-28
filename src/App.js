@@ -23,6 +23,9 @@ import sample7 from './assets/sample7.png';
 import sample8 from './assets/sample8.png';
 import dinotopiaIsReal from './assets/dinotopia.png';
 
+import dinoverseartbook from './assets/dinoverseartbook.png';
+import dinoverseticket from './assets/dinoverseticket.png';
+
 import Swal from "sweetalert2";
 
 import React, { useEffect, useState } from "react";
@@ -42,12 +45,15 @@ const App = () => {
   const [numMfers, setNumMfers] = useState(0);
   const [totalSupply, setTotalSupply] = useState(0);
 
+  const [currentBalance, setCurrentBalance] = useState(0);
+
   const contractABI = DinosDeluxe.abi;
 
   useEffect(() => {
     checkIfWalletIsConnected();
     checkIsMintActive();
     updateTotalSupply();
+    updateBalance();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -83,6 +89,26 @@ const App = () => {
         console.log("supply");
         console.log(`${supply}`);
         setTotalSupply(parseInt(`${supply}`));
+      }
+    } catch (error) {
+      console.log(error);
+      console.log("cant find contract?");
+    }
+  }
+
+  const updateBalance = async () => {
+    try {
+      const { ethereum } = window;
+
+      if (ethereum) {
+
+        const provider = new ethers.providers.Web3Provider(ethereum);
+        const signer = provider.getSigner();
+        const connectedContract = new ethers.Contract(CONTRACT_ADDRESS, contractABI, signer);
+
+        setCurrentBalance(parseInt(await connectedContract.balanceOf(currentAccount)));
+        console.log("balance");
+        console.log(`${currentBalance}`);
       }
     } catch (error) {
       console.log(error);
@@ -182,6 +208,7 @@ const App = () => {
             let nftTxn = await connectedContract.mint(numMfers, options);
             console.log("Mining mint... please wait.")
             await nftTxn.wait();
+            updateBalance();
             Swal.fire(`Successfully minted ${numMfers} Dinos!`, '', 'info');
             console.log(`Mined, see transaction: https://etherscan.io/tx/${nftTxn.hash}`);
           }
@@ -221,7 +248,7 @@ const App = () => {
             {/* <img src={ddLogo} alt="ddLogo" className="dd-logo"/> */}
             <p className="header gradient-text title">DINOS DELUXE</p> 
             <p className="sub-text">
-              3000 dinos vibing moments before the meteor hits
+              3000 dinos vibing moments before the meteor hits.
             </p>
             <br />
             {currentAccount === "" ? (
@@ -295,7 +322,15 @@ const App = () => {
           Art
         </div>
         <br />
-        <p className="sub-text">There are 3000 <b>Dino Deluxes</b></p>
+        <p className="sub-text">There are 10 ultra <b>Legendary Galaxy Dinos</b></p>
+        <br />
+        <div className="art-preview-container">
+            <img src={dino1} className="art-gif" />
+            <img src={dino2} className="art-gif" />
+            <img src={dino3} className="art-gif" />
+        </div>
+        <br />
+        <p className="sub-text">And 3000 <b>Dino Deluxes</b></p>
         <br />
         <div className="art-preview-container">
           <img src={sample1} className="art-sample" />
@@ -309,14 +344,7 @@ const App = () => {
           <img src={sample7} className="art-sample" />
           <img src={sample8} className="art-sample" />
         </div>
-        <br />
-        <p className="sub-text">There are 10 ultra <b>Legendary Galaxy Dinos</b></p>
-        <br />
-        <div className="art-preview-container">
-            <img src={dino1} className="art-gif" />
-            <img src={dino2} className="art-gif" />
-            <img src={dino3} className="art-gif" />
-        </div>
+    
       </div>
       <div id="package" className="container package-container">
         <div className="horizontal-divider"></div>
@@ -327,9 +355,7 @@ const App = () => {
         <img src={artbook1} className="artbook-img" />
         <img src={artbook2} className="artbook-img" />
         <p className="sub-text">+ Unique Cool NFT</p>
-        <a className="dino-link" href="https://dinosdeluxe.itch.io/dinos-deluxe?secret=fIsz26QimINPBOKljgzJ6XASNQ">
-          <p className="sub-text">+ One-Way Ticket to Dinotopia</p>
-        </a>
+        <p className="sub-text">+ One-Way Ticket to Dinotopia</p>
         <p className="sub-text">+ Autographed Dinos Deluxe Artbook</p>
       </div>
       <div id="utility" className="container roadmap-container">
@@ -339,13 +365,25 @@ const App = () => {
         </div>
         <br />
         <div className="dino-container">
-          <a className="dino-link" href="https://dinosdeluxe.itch.io/dinos-deluxe?secret=fIsz26QimINPBOKljgzJ6XASNQ">
-            <p className="sub-text">All holders of Dinos Deluxe will get access to <b>Dinotopia</b></p>
-          </a>
-          <a className="dino-link" href="https://dinosdeluxe.itch.io/dinos-deluxe?secret=fIsz26QimINPBOKljgzJ6XASNQ">
-            <img className="dinotopia-img" src={dinotopiaIsReal} />  
-          </a>
-          <p className="sub-text">Dinotopia is a unique gaming experience reliving the great extinction, who will be the last dinosaur on earth?</p>
+          <p className="sub-text">All holders of Dinos Deluxe will get access to <b>Dinotopia</b></p>
+          {currentBalance > 0 ? (
+            <div className="unlockables" >
+              <div className="horizontal-divider"></div>
+              <a href="https://dinosdeluxe.itch.io/dinos-deluxe">
+                <img src={dinoverseticket} className="dino-ticket-img" />
+              </a>
+              <a href="https://ipfs.io/ipfs/Qmeed4613gU6ewdUiUoe3wJpvXShAcTtkK2ynBDND7PnTS">
+                <img src={dinoverseartbook} className="dino-art-book-img" />
+              </a>
+              <div className="horizontal-divider"></div>
+            </div>
+          ) : (
+            <button onClick={updateBalance} className="cta-button connect-wallet-button dinotopia-ticket">
+              MINT FOR A DINOTOPIA TICKET
+            </button>
+          )}
+          <img className="dinotopia-img" src={dinotopiaIsReal} />  
+          <p className="sub-text">Dinotopia is a unique P2E gaming experience reliving the great extinction, who will be the last dinosaur on earth?</p>
         </div>
       </div>
       {/* Footer */}
