@@ -352,8 +352,10 @@ const App = () => {
           WHAT YOU GET
         </div>
         <p className="sub-text"><b>It's more than a PFP...</b></p>
-        <img src={artbook1} className="artbook-img" />
-        <img src={artbook2} className="artbook-img" />
+        <div className="artbooks-div">
+          <img src={artbook1} className="artbook-img" />
+          <img src={artbook2} className="artbook-img" />
+        </div>
         <p className="sub-text">+ Unique Cool NFT</p>
         <p className="sub-text">+ One-Way Ticket to Dinotopia</p>
         <p className="sub-text">+ Autographed Dinos Deluxe Artbook</p>

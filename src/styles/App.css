@@ -22,10 +22,20 @@
   width: 100%;
 }
 
+.artbooks-div {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
 .horizontal-divider {
   border-bottom: 2px solid #ea00d8;
   margin: 30px;
   height: 10px;
+  width: 100%;
 }
 
 .art-container {
@@ -37,7 +47,9 @@
 }
 
 .artbook-img {
-  width: 50%;
+  width: 40%;
+  margin-right: 5%;
+  margin-right: 5%;
   border-radius: 5px;
   margin-bottom: 10px;
 }
