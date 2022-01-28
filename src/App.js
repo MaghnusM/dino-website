@@ -25,6 +25,7 @@ import dinotopiaIsReal from './assets/dinotopia.png';
 
 import dinoverseartbook from './assets/dinoverseartbook.png';
 import dinoverseticket from './assets/dinoverseticket.png';
+import dinoad from './assets/dinoad.png';
 
 import Swal from "sweetalert2";
 
@@ -384,8 +385,9 @@ const App = () => {
               MINT FOR A DINOTOPIA TICKET
             </button>
           )}
-          <img className="dinotopia-img" src={dinotopiaIsReal} />  
+          <img className="dinotopia-img" src={dinoad} />
           <p className="sub-text">Dinotopia is a unique P2E gaming experience reliving the great extinction, who will be the last dinosaur on earth?</p>
+          <img className="dinotopia-img" src={dinotopiaIsReal} />  
         </div>
       </div>
       {/* Footer */}
