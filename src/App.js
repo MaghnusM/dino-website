@@ -19,8 +19,6 @@ import sample3 from './assets/sample3.png';
 import sample4 from './assets/sample4.png';
 import sample5 from './assets/sample5.png';
 import sample6 from './assets/sample6.png';
-import sample7 from './assets/sample7.png';
-import sample8 from './assets/sample8.png';
 import dinotopiaIsReal from './assets/dinotopia.png';
 
 import dinoverseartbook from './assets/dinoverseartbook.png';
@@ -337,13 +335,11 @@ const App = () => {
           <img src={sample1} className="art-sample" />
           <img src={sample2} className="art-sample" />
           <img src={sample3} className="art-sample" />
-          <img src={sample4} className="art-sample" />
         </div>
         <div className="art-preview-container">
+          <img src={sample4} className="art-sample" />
           <img src={sample5} className="art-sample" />
           <img src={sample6} className="art-sample" />
-          <img src={sample7} className="art-sample" />
-          <img src={sample8} className="art-sample" />
         </div>
     
       </div>
@@ -393,7 +389,7 @@ const App = () => {
       <div className="footer">
         <div className="footer-container-bottom">
           <a href="#mint">
-            <a href="https://twitter.com/dinosdeluxe">
+            <a href="https://opensea.io/collection/dinosdeluxe">
               <img className="logo-footer-button" src={OpenseaLogo} />  
             </a>
           </a>
@@ -401,7 +397,7 @@ const App = () => {
           <a href="https://twitter.com/dinosdeluxe">
             <img className="twitter-button" src={TwitterLogo} />  
           </a>
-          {/* <a href="https://discord.gg/KJaJ9g9x"><img className="discord-button" src={DiscordLogo} />  </a> */}
+          <a href="https://discord.gg/WutVFFnV9K"><img className="discord-button" src={DiscordLogo} />  </a>
         </div>
       </div>
     </div>
