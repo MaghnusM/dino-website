@@ -127,6 +127,7 @@ const App = () => {
           console.log("UPDATE SUPPLY");
           updateTotalSupply();
           checkIfWalletIsConnected();
+          window.location.reload(false);
         } else {
           console.log("no accounts!");
         }
@@ -264,7 +265,11 @@ const App = () => {
               FIRST 500 FREE, THEN 0.03 ETH
             </p>
             <p className="smol-text">
+            {currentAccount !== "" ? (
               <b>MINTED: {totalSupply} / 3000</b>
+            ) : (
+              <b>CONNECT</b>
+            )}
             </p>
             <div className="minting-container">
               <div className="minting-image">
@@ -272,7 +277,11 @@ const App = () => {
               <div className="minting-amount">
                 <img src={dino1gif} className="art-gif-preview" />
                 <p className="supply">Dinos Deluxe</p>
-                <p className="supply">{totalSupply} / 3000</p>
+                {currentAccount !== "" ? (
+                  <p className="supply">{totalSupply} / 3000</p>
+                ) : (
+                  <p className="supply">CONNECT</p>
+                )}
               </div>
             </div>
           </div>
