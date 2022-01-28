@@ -357,9 +357,9 @@ const App = () => {
           <img src={artbook1} className="artbook-img" />
           <img src={artbook2} className="artbook-img" />
         </div>
-        <p className="sub-text">+ Unique Cool NFT</p>
-        <p className="sub-text">+ One-Way Ticket to Dinotopia</p>
-        <p className="sub-text">+ Autographed Dinos Deluxe Artbook</p>
+        <p className="sub-text">+ Unique Dino <b>NFT</b></p>
+        <p className="sub-text">+ One-Way Ticket to <b>Dinotopia Game</b></p>
+        <p className="sub-text">+ Autographed Dinos Deluxe <b>Artbook</b></p>
       </div>
       <div id="utility" className="container roadmap-container">
         <div className="horizontal-divider"></div>
@@ -369,6 +369,8 @@ const App = () => {
         <br />
         <div className="dino-container">
           <p className="sub-text">All holders of Dinos Deluxe will get access to <b>Dinotopia</b></p>
+          <img className="dinotopia-img" src={dinotopiaIsReal} />  
+          <p className="sub-text">Dinotopia is a unique P2E gaming experience reliving the great extinction, who will be the last dinosaur on earth?</p>
           {currentBalance > 0 ? (
             <div className="unlockables" >
               <div className="horizontal-divider"></div>
@@ -382,12 +384,9 @@ const App = () => {
             </div>
           ) : (
             <button onClick={updateBalance} className="cta-button connect-wallet-button dinotopia-ticket">
-              MINT FOR A DINOTOPIA TICKET
+              MINT FOR A TICKET TO DINOTOPIA
             </button>
           )}
-          <img className="dinotopia-img" src={dinoad} />
-          <p className="sub-text">Dinotopia is a unique P2E gaming experience reliving the great extinction, who will be the last dinosaur on earth?</p>
-          <img className="dinotopia-img" src={dinotopiaIsReal} />  
         </div>
       </div>
       {/* Footer */}
