@@ -370,7 +370,7 @@ const App = () => {
           {currentBalance > 0 ? (
             <div className="unlockables" >
               <div className="horizontal-divider"></div>
-              <a href="https://dinosdeluxe.itch.io/dinos-deluxe">
+              <a href="https://dinosdeluxe.itch.io/dinos-deluxe?secret=fIsz26QimINPBOKljgzJ6XASNQ">
                 <img src={dinoverseticket} className="dino-ticket-img" />
               </a>
               <a href="https://ipfs.io/ipfs/Qmeed4613gU6ewdUiUoe3wJpvXShAcTtkK2ynBDND7PnTS">
