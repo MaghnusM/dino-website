@@ -183,7 +183,7 @@ const App = () => {
             if (parseInt(supply) + parseInt(numMfers) > 500) {
               console.log("supply");
               console.log(parseInt(supply));
-              amount = numMfers * 0.03;
+              amount = numMfers * 0.01;
             }
 
             console.log("amount");
@@ -288,7 +288,7 @@ const App = () => {
             ]}
             <br />
             <p className="smol-text">
-              FIRST 500 FREE, THEN 0.03 ETH
+              FIRST 500 FREE, THEN 0.01 ETH
             </p>
             <p className="smol-text">
             {currentAccount !== "" ? (
